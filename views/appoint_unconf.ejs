@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Doctor Dash</title>
+  <link rel="stylesheet" href="/css/appointments.css">
+</head>
+
+<body>
+  <div class="adminLink left">
+    <a id="logout" href="/doctors/logout">Log out</a>
+  </div>
+  <div class="container">
+    <h1 class="titleFonts">Welcome Dr. <%= doctor.first_name %> <%= doctor.last_name %></h1>
+    <div class="row">
+      <div class="appointChoice">
+        <a href="/appointments">Confirmed Appointments</a><a href="/appointments/unconfirmed"> >Unconfirmed Appointments< </a><a href="/appointments/completed">Completed Appointments</a>
+      </div>
+      <!-- appointChoice -->
+    </div>
+    <!-- row -->
+    <div class="patientRow">
+      <% for(let i = 0; i<results.length; i++){ %>
+        <div class="patientDiv">
+
+        <div class="patientLeftDiv">
+          <h2 class="name_h2"><%= results[i].first_name %> <%= results[i].last_name %></h2>
+          <h3 class="reason_h3"><%= results[i].reason %></h3>
+          <p class="details_p">
+            <%= results[i].details %>
+          </p>
+        </div><!-- patientLeftDiv -->
+
+        <div class="patientRightDiv">
+          <h2 class="date_h2"><%= results[i].date %></h2>
+          <div class="linkBtn right">
+            <a href="/appointments/view/<%= results[i].patient_id %>">View</a>
+          </div>
+          <!-- linkBtn -->
+        </div><!-- patientRightDiv -->
+
+        </div>
+        <!-- patientDiv -->
+        <% } %>
+    </div>
+    <!-- patientRow -->
+  </div>
+  <!-- container -->
+</body>
+
+</html>

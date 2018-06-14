@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Doctor Dash</title>
+  <link rel="stylesheet" href="/css/appointments.css">
+</head>
+
+<body>
+  <div class="adminLink left">
+    <a id="logout" href="/doctors/logout">Log out</a>
+  </div>
+  <div class="container">
+    <h1 class="titleFonts">Welcome Dr. <%= doctor.first_name %> <%= doctor.last_name %> </h1>
+    <div class="row">
+      <div class="appointChoice">
+        <a href="/appointments">Confirmed Appointments</a><a href="/appointments/unconfirmed">Unconfirmed Appointments</a><a href="/appointments/completed">Completed Appointments</a>
+      </div>
+      <!-- appointChoice -->
+    </div>
+    <!-- row -->
+
+    <h2 class="titleFonts">You have no <%= locale.here %> appointments.</h2>
+
+  </div>
+  <!-- container -->
+</body>
+
+</html>

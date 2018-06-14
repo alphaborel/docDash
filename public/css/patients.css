@@ -1,0 +1,30 @@
+@import 'main.css';
+
+.adminLinkLeft {
+  position: absolute;
+  top: 0px;
+  left: 1%;
+  width: 125px;
+  height: 30px;
+  padding-top: 10px;
+  border-radius: 12px;
+  background-color: #067f6e;
+}
+#edit {
+  padding-left: 45px;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: white;
+}
+.row {
+  margin: 0 auto;
+  width: 400px;
+  padding: 1%;
+  border-radius: 12px;
+  text-align: center;
+  background-color: #067f6e;
+}
+.linkBtn.extended {
+  width: 300px;
+  margin: 0 auto;
+}

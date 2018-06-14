@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Doctor Dash</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <h1 class="titleFonts">Update <%= results.first_name %> <%= results.last_name %></h1>
+
+  <div class="formBoxDiv">
+    <form action="/appointments/edit/<%= results.patient_id %>" method="post">
+      <label>First Name:</label><input type="text" name="firstName" value="<%= results.first_name %>"><br>
+      <label>Last Name:</label><input type="text" name="lastName" value="<%= results.last_name %>"><br>
+      <label>Date Requested:</label><input type="date" name="date" value="<%= results.date %>"><br>
+      <label>Reason for Visit:</label><input type="text" name="reason" value="<%= results.reason %>"><br>
+      <label>Details:</label><br>
+      <textarea name="details" rows="8" cols="30"><%= results.details %></textarea><br>
+      <button type="submit" name="Submit">Update</button>
+    </form>
+  </div>
+  <!-- formBoxDiv -->
+
+  </div>
+  <!-- container -->
+
+</body>
+
+</html>

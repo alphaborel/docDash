@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Doctor Dash</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/doctors.css">
+</head>
+
+<body>
+  <div class="adminLink right">
+    <a id="login" href="/doctors/login">Doctor Login</a>
+  </div>
+
+  <div class="container">
+    <h1 class="titleFonts">Welcome to Doctors <i>Dash</i></h1>
+    <h1 class="titleFonts">Doctors Available:</h1>
+
+    <div class="docListDiv">
+      <% for(let i = 0; i<results.length; i++){ %>
+        <div class="doctorDiv">
+          <h2>Dr. <%= results[i].first_name %> <%= results[i].last_name %></h2>
+          <div class="avatarDiv">
+            <img class="avatar" src="<%= results[i].profile_pic %>" alt="doctor pic">
+          </div>
+          <!-- avatarDiv -->
+
+          <a href="/book/<%= results[i].doc_id %>">
+          <div class="linkBtn">
+            Book
+          </div>
+          </a>
+          <!-- avatarDiv -->
+        </div>
+        <!-- doctorDiv -->
+        <% } %>
+    </div>
+    <!-- doctorListDiv -->
+  </div>
+  <!-- container -->
+</body>
+
+</html>

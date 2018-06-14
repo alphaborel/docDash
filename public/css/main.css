@@ -1,0 +1,70 @@
+/* elements common to all pages */
+body {
+  background: #293f50
+}
+input {
+  margin-top: 1em;
+  height: 20px;
+  width: 195px;
+}
+label {
+  margin-top: 1%;
+  color: white;
+  font-size: 1.4em;
+}
+button {
+  background-color: #56ab2f;
+  background: -webkit-linear-gradient(to bottom, #a8e063, #56ab2f);
+  background: linear-gradient(to bottom, #a8e063, #56ab2f);
+  font-size: 1.2em;
+  width: 200px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+button:hover{
+  box-shadow: 3px 5px #212020;
+}
+.container {
+  margin: 0 auto;
+  margin-top: 50px;
+  max-width: 95%;
+  min-width: 30%;
+}
+.titleFonts{
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+  font-size: 2em;
+}
+.formBoxDiv {
+  margin: 0 auto;
+  padding-left: 25px;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  width: 225px;
+  background-color: #067f6e;
+  border-radius: 5px;
+}
+.linkBtn {
+  background-color: #56ab2f;
+  background: -webkit-linear-gradient(to bottom, #a8e063, #56ab2f);
+  background: linear-gradient(to bottom, #a8e063, #56ab2f);
+  width: 6em;
+  height: 2em;
+  padding-top: 1em;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.linkBtn:hover {
+  box-shadow: 3px 5px #212020;
+}
+a {
+  text-decoration: none;
+}
+a .linkBtn {
+  color: black;
+  text-transform: uppercase;
+}

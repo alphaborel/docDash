@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Doctor Dash</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <h1 class="titleFonts">Booking Dr. <%= results.first_name %> <%= results.last_name %></h1>
+
+  <div class="formBoxDiv">
+    <form action="/book/add" method="post">
+      <label>*First Name:</label><input type="text" name="firstName" placeholder="First Name" required><br>
+      <label>*Last Name:</label><input type="text" name="lastName" placeholder="Last Name" required><br>
+      <label>*Date Requested:</label><input type="date" name="date" placeholder="Date requested" required><br>
+      <label>*Reason for Visit:</label><input type="text" name="reason" placeholder="Reason for your visit" required><br>
+      <label>Details:</label><br>
+      <textarea name="details" rows="8" cols="30" value="none"></textarea><br>
+      <input type="hidden" name="doctor" value="<%= results.doc_id %>">
+      <button type="submit" name="Submit">Submit</button>
+    </form>
+  </div>
+  <!-- formBoxDiv -->
+
+  </div>
+  <!-- container -->
+
+</body>
+
+</html>

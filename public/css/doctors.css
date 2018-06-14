@@ -1,0 +1,47 @@
+@import 'main.css';
+
+.adminLink.right {
+  position: absolute;
+  top: 0px;
+  right: 1%;
+  width: 145px;
+  height: 40px;
+  padding-top: 10px;
+  border-radius: 12px;
+  background-color: #067f6e;
+}
+#login {
+  padding-left: 20px;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: white;
+}
+.docListDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.doctorDiv {
+  text-align: center;
+  background-color: white;
+  max-width: 30%;
+  min-width: 300px;
+  padding: 1%;
+  margin-left: 2em;
+  margin-top: 2em;
+}
+.avatarDiv {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  background-color: grey;
+  background-image: url('/img/profileDefault.jpg');
+}
+img {
+  max-width:100%;
+  max-height:100%;
+}
+.linkBtn {
+  margin-top: 15px;
+  margin-left: 50%;
+}

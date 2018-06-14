@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Doctor Dash</title>
+  <link rel="stylesheet" href="/css/patients.css">
+
+</head>
+
+<body>
+
+  <div class="adminLinkLeft">
+    <a id="edit" href="/appointments/edit/<%= results.patient_id %>">Edit</a>
+  </div>
+
+  <div class="container">
+    <div class="row">
+    <h1 class="titleFonts"><%= results.first_name %> <%= results.last_name %></h1>
+    <p>
+      <%= results.reason %>
+    </p>
+    <p>
+      <%= results.details %>
+    </p>
+
+    <% if(results.appointment_status === 'confirmed'){ %>
+      <% for(let i = 0; i>=0; i--){ %>
+        <div class="linkBtn extended">
+          <a href="/appointments/update/<%= results.patient_id %>">Mark as Completed</a>
+        </div>
+        <% } %>
+    <% } else if(results.appointment_status === 'unconfirmed'){ %>
+          <% for(let i = 0; i>=0; i--){ %>
+            <div class="linkBtn extended">
+              <a href="/appointments/update/<%= results.patient_id %>">Confirm Appointment</a>
+            </div>
+        <% } %>
+    <% } else { %>
+          <% for(let i = 0; i>=0; i--){ %>
+              <div class="linkBtn extended">
+                <a href="/appointments/update/<%= results.patient_id %>">Delete Appointment</a>
+              </div>
+            <% } %>
+          <% } %>
+
+    <h2 class="titleFonts">Notes:</h2>
+    <% for(let i = 0; i<notes.length; i++){ %>
+      <p><%= notes[i].note %></p>
+    <% } %>
+
+    <form action="/appointments/notes/<%= results.patient_id %>" method="post">
+      <textarea name="notes" rows="8" cols="60"></textarea> <br>
+      <button type="submit" name="button">Add Note</button>
+    </form>
+  </div><!--row -->
+  </div>
+  <!--container-->
+</body>
+
+</html>

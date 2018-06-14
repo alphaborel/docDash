@@ -1,0 +1,69 @@
+@import 'main.css';
+/* this is for the link menu */
+.row {
+  text-align: center;
+}
+.appointChoice {
+  border-radius: 35px;
+  background-color: #067f6e;
+}
+.appointChoice a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1.2em;
+  font-size: 1.5em;
+  color: white;
+}
+.appointChoice a:hover::before,
+.appointChoice a:focus::before {
+	color: #fff;
+	text-shadow: 10px 0 #fff, -10px 0 #fff;
+}
+.appointChoice a:hover,
+.appointChoice a:focus {
+	color: #020a54;
+}
+.adminLink.left {
+  position: absolute;
+  top: 0px;
+  left: 1%;
+  width: 125px;
+  height: 30px;
+  padding-top: 10px;
+  border-radius: 12px;
+  background-color: #067f6e;
+}
+#logout {
+  padding-left: 28px;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: white;
+}
+/* styles for the appoinment boxes */
+.patientRow {
+  display: flex;
+  flex-wrap: wrap;
+}
+.patientDiv {
+  position: relative;
+  margin: 0 auto;
+  padding: 1em;
+  min-width: 800px;
+  margin-top: 2%;
+  background-color: white;
+}
+.patientDiv .patientLeftDiv {
+  min-width: 40%;
+  max-width: 68%;
+  float: left;
+  clear: right;
+}
+.patientDiv .patientRightDiv {
+  min-width: 30%;
+  float: right;
+  text-align: right;
+}
+.patientDiv .linkBtn.right {
+  margin-top: 20%;
+  float: right;
+}

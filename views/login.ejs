@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Doctor Dash</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+  <div class="pageWrapper">
+
+    <h1 class="titleFonts">Login</h1>
+
+    <div class="formBoxDiv">
+    <form action="/login" method="post">
+      <input type="text" name="email" placeholder="Email" required><br>
+      <input type="password" name="password" placeholder="Password" required><br>
+      <button type="submit" name="button">Login</button>
+    </form>
+  </div>
+  <!--formBoxDiv-->
+
+  <hr>
+
+    <h1 class="titleFonts">Register</h1>
+
+    <div class="formBoxDiv">
+    <form action="/doctors/login" method="post">
+      <label>*First Name:</label><input type="text" name="firstName" placeholder="First Name" required><br>
+      <label>*Last Name:</label><input type="text" name="lastName" placeholder="Last Name" required><br>
+      <label>*Email:</label><input type="email" name="email" placeholder="email" required><br>
+      <label>Bio:</label><input type="text" name="bio" placeholder="Bio"><br>
+      <label>Profile Pic:</label><input type="text" name="avatar" value="./img/profileDefault.jpg" placeholder="Image Url"><br>
+      <label>*Password:</label><input type="password" name="password" placeholder="Password" required><br>
+      <label>*Confirm Password:</label><input type="password" name="confirm" placeholder="Confirm Password" required><br>
+      <button type="submit" name="button">Register</button>
+    </form>
+
+    </div>
+  <!--formBoxDiv-->
+  </div>
+  <!-- pageWrapper -->
+</body>
+
+</html>
